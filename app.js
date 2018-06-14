@@ -1,27 +1,8 @@
-const fs = require('fs');
-const _ = require('lodash');
-const yargs = require('yargs');
-
 const CheckPhonesUI = require('./ui/CheckPhonesUI.js');
 
-const fileOptions = {
-  describe: 'File Name',
-  demand: true,
-  alias: 'f'
-};
-const argv = yargs
-  .command('checkphones', 'check phones', {
-    file: fileOptions,
-  })
-  .help()
-  .argv;
-var command = argv._[0];
-
-switch(command) {
-  case "checkphones":
-    new CheckPhonesUI(argv.file).checkPhones();
-    break;
-  default:
-  console.log("command not supported yet");
-  break;
+const args = process.argv
+if(args[2]){
+    new CheckPhonesUI(args[2]).check();
+}else{
+  console.log("No file name passed as argument")
 }
