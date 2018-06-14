@@ -1,4 +1,4 @@
-"use strict";
+
 const config = require("config");
 const reader = require("buffered-reader");
 const DataReader = reader.DataReader

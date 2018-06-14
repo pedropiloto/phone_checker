@@ -1,11 +1,10 @@
-"use strict";
 const CheckPhonesController = require('../controller/CheckPhonesController')
+
 class CheckPhonesUI {
 
   constructor(fileName) {
     this.fileName = fileName
     this.controller = new CheckPhonesController(this.fileName)
-
   }
 
   check() {

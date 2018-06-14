@@ -1,10 +1,10 @@
-"use strict"
+
 
 class PhoneNumber{
   constructor(number){
     this.number = number
   }
-  
+
   validate(){
     //Escape '+' special regex character
     var temp = this.number.replace('p','a').replace('+','p')
@@ -17,5 +17,7 @@ class PhoneNumber{
     var temp = (this.number.startsWith("00"))?this.number.substring(2) : (this.number.startsWith("+")) ? this.number.substring(1) : this.number
     return temp.startsWith(code)
   }
+
+}
 
 module.exports = PhoneNumber

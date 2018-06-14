@@ -1,4 +1,3 @@
-"use strict"
 
 class AreaCode {
 
@@ -10,7 +9,7 @@ class AreaCode {
   increaseCount() {
     this.count++;
   }
-  
+
 }
 
 module.exports = AreaCode
